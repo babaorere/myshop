@@ -9,12 +9,12 @@
         <div class="col-md-4">
             <div class="text-center h1 text-white bg-primary p-2">Login</div>
             {% include "_messages.html" %}
-            <form method="post" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" method="post">
                 <div>
                     {{ render_field(form.email, class="form-control") }}
                     {{ render_field(form.password, class="form-control") }}
                 </div>
-                <p><input type=submit value="Login" class="btn btn-info mt-2"></p>
+                <p><input class="btn btn-info mt-2" type=submit value="Login"></p>
             </form>
         </div>
     </div>

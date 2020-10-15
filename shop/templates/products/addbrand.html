@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            {% include "_messages.html" %}
+            {% if brands %}
+            <h1 class="text-center mt5">Add a Brand</h1>
+            <form action="" method="POST">
+                <p><input class="form-control" name="brand" type="text"></p>
+                <p><input class="btn btn-info mt-2" type="submit" value="Add Brand"></p>
+            </form>
+            {% else: %}
+            <h1 class="text-center mt5">Add a Category</h1>
+            <form action="" method="POST">
+                <p><input class="form-control" name="category" type="text"></p>
+                <p><input class="btn btn-info mt-2" type="submit" value="Add Category"></p>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
